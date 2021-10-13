@@ -93,7 +93,7 @@ customElements.define(
 
 ## Helpers
 
-### `html`
+### <code>html``</code>
 
 ```js
 import { html } from "eka";
