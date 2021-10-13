@@ -109,21 +109,3 @@ customElements.define(
   }
 );
 ```
-
-### `light()` and `shadow()`
-
-```js
-this.querySelector(".foo");
-this.querySelectorAll(".foo");
-this.shadowRoot.querySelector(".foo");
-this.shadowRoot.querySelectorAll(".foo");
-```
-
-is equivalent to:
-
-```js
-light(this, ".foo");
-lightAll(this, ".foo");
-shadow(this, ".foo");
-shadowAll(this, ".foo");
-```
