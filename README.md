@@ -110,7 +110,7 @@ customElements.define(
 );
 ```
 
-### `shadow()` and `light()`
+### `light()` and `shadow()`
 
 ```js
 this.querySelector(".foo");
