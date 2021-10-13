@@ -94,18 +94,15 @@ customElements.define(
       </li>`;
     }
 
-    addPet(pet) {
-      let petElement = this.shadowRoot
-        .querySelector("#pets")
-        .appendChild(
-          this.constructor.petTemplate.content.cloneNode(true).firstElementChild
-        );
-      petElement.querySelector(".name").textContent = pet.name;
-      petElement.querySelector(".age").textContent = pet.age;
+    addPet(petData) {
+      let pet = this.constructor.petTemplate.content.cloneNode(true);
+      pet.querySelector(".name").textContent = petData.name;
+      pet.querySelector(".age").textContent = petData.age;
+      this.shadowRoot.querySelector("#pets").append(pet);
     }
 
-    getPet(i) {
-      return this.shadowRoot.querySelector(`#pets > :nth-child(${i + 1})`);
+    getPet(index) {
+      return this.shadowRoot.querySelector(`#pets > :nth-child(${index + 1})`);
     }
   }
 );
