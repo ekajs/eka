@@ -24,23 +24,6 @@ customElements.define(
 );
 ```
 
-### With `html`
-
-```js
-import { html } from "eka";
-
-customElements.define(
-  "x-hello-world",
-  class extends HTMLElement {
-    constructor() {
-      super();
-      this.attachShadow({ mode: "open" });
-      this.shadowRoot.append(html`Hello, world!`);
-    }
-  }
-);
-```
-
 ### Get/Set data
 
 ```js
@@ -109,6 +92,23 @@ customElements.define(
 ```
 
 ## Helpers
+
+### `html`
+
+```js
+import { html } from "eka";
+
+customElements.define(
+  "x-hello-world",
+  class extends HTMLElement {
+    constructor() {
+      super();
+      this.attachShadow({ mode: "open" });
+      this.shadowRoot.append(html`Hello, world!`);
+    }
+  }
+);
+```
 
 ### `shadow()` and `light()`
 
